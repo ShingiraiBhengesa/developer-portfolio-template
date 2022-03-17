@@ -1,56 +1,36 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# My Portfolio
 
-> Description the project.
+> Professional Portfolio created using HTML, CSS
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
+- HTML
+- CSS
 
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+- GIT
+
 ### Setup
 
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
+Open a terminal or a git bash in the desired directory and run  **git clone https://github.com/ShingiraiBhengesa/My-Portfolio.git**
 
 
+## Author
 
-## Authors
+👤 **Shingirai Bhengesa**
 
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@ShingiraiBhengesa](https://github.com/ShingiraiBhengesa)
+- Twitter: [@bhengesa](https://twitter.com/bhengesa)
+- LinkedIn: [Shingirai Bhengesa](https://www.linkedin.com/in/shingirai-bhengesa-612b09206/)
 
 ## 🤝 Contributing
 
