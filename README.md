@@ -21,7 +21,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-Open a terminal or a git bash in the desired directory and run   git clone https://github.com/ShingiraiBhengesa/My-Portfolio.git
+Open a terminal or a git bash in the desired directory and run  **git clone https://github.com/ShingiraiBhengesa/My-Portfolio.git**
 
 
 ## Author
