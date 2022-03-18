@@ -234,6 +234,15 @@ li {
   justify-content: space-around;
 }
 
+.categorie-tags li {
+  background: white;
+  color: #36b37f;
+  font-size: 12px;
+  padding: 1em 0.5em;
+  margin: 1em 0.5em;
+  border-radius: 5px;
+}
+
 .card-work > .card-tags > li {
   background: lightgray;
   font-size: 12px;
@@ -388,15 +397,6 @@ li {
 .categorie-tags {
   display: flex;
   flex-wrap: wrap;
-}
-
-.categorie-tags li {
-  background: white;
-  color: #36b37f;
-  font-size: 12px;
-  padding: 1em 0.5em;
-  margin: 1em 0.5em;
-  border-radius: 5px;
 }
 
 .categorie-title {
