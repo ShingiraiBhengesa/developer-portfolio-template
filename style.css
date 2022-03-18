@@ -4,6 +4,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  padding-bottom: 2em;
 }
 
 body {
@@ -29,8 +30,8 @@ span {
 }
 
 img {
+  max-width: 100%;
   display: block;
-  object-fit: fill;
 }
 
 button {
@@ -57,7 +58,24 @@ button:active {
 }
 
 /* Sections */
-header {
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.container-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.header-nav-desktop {
+  display: none;
+}
+
+.header-nav-phone {
   padding: 0 35px;
   display: flex;
   justify-content: space-between;
@@ -76,10 +94,7 @@ header {
 
 .intro {
   background: #fff url(./assets/header-illsutration-mobile.svg) no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  background-size: 100%;
 }
 
 .intro h1:first-child {
@@ -110,6 +125,48 @@ header {
 
 li {
   margin: 0 8px;
+}
+
+@media (min-width: 992px) {
+  .header-nav-phone {
+    display: none;
+  }
+
+  .header-title {
+    padding-top: 3em;
+  }
+
+  .header-nav-desktop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    padding-top: 1em;
+    margin: 0;
+  }
+
+  .header-nav-desktop li {
+    list-style: none;
+    padding: 0;
+    margin: 1em;
+    font-size: 14px;
+    font-weight: bold;
+    color: #42526e;
+    cursor: pointer;
+  }
+
+  .intro {
+    background: #fff url(./assets/Header-llustration-desktop.svg) no-repeat;
+    background-size: 100%;
+    padding-bottom: 8em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .intro {
+    padding-bottom: 15em;
+  }
 }
 
 /* Works Section */
@@ -286,89 +343,69 @@ li {
   margin-left: 1.3em;
 }
 
-@media (min-width: 800px) {
-  .works {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px repeat(3, 1fr);
-  }
+/* About Section */
+.about-myself {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  .works h1:first-child {
-    align-self: flex-end;
-    padding: 1em;
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
-  }
-
-  .works h1:first-child::after {
-    content: none;
-  }
+  /* prettier-ignore */
+  background: url(./assets/illustration_1-about_me-mobile.svg) no-repeat 100% 0%, url(./assets/illustration_2-about_me_mobile.svg) no-repeat 0 300px;
+  text-align: center;
+  padding: 2em;
 }
 
-@media (min-width: 1050px) {
-  .tag-mobile {
-    background: #ebf0ee;
-    font-family: Inter, sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 0.75em;
-    line-height: 1em;
-    letter-spacing: 0.03em;
-    color: #344563;
-    border-radius: 0.5em;
-  }
-
-  .card-work-details-mobile {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 60px;
-    grid-template-rows: 60px 50% 1fr 60px 1fr;
-  }
-
-  .btn-close-details {
-    background: #ebecf0;
-    position: relative;
-    right: 0;
-    left: 0;
-    grid-column: -2 / -1;
-    grid-row: 1/2;
-  }
-
-  .card-image-details-mobile {
-    grid-column: 1 / -1;
-    grid-row: 2 / 3;
-  }
-
-  .card-title-mobile {
-    grid-column: 1 / 3;
-    grid-row: 3 / 4;
-    font-size: 1.5em;
-  }
-
-  .card-button-mobile {
-    grid-column: 3 / 5;
-    grid-row: 3 / 4;
-  }
-
-  .card-tags-mobile {
-    grid-column: 1 /-1;
-    grid-row: 4 / 5;
-  }
-
-  .card-paragraph-mobile {
-    grid-column: 1 / -1;
-    grid-row: 5 / 6;
-  }
+.about-myself p {
+  font-size: 20px;
+  color: #42526e;
 }
 
-@media (min-width: 1150px) {
-  .works {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 200px repeat(2, 1fr);
-  }
-
-  .works h1:first-child {
-    padding: 1em;
-    grid-column: 1 / 4;
-    grid-row: 1 / 2;
-  }
+.categorie-about-myself {
+  list-style: none;
+  display: flex;
+  width: max-content;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
 }
 
+.card-categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 2em;
+  height: 352px;
+  width: 327px;
+  background: #ebf0ee;
+  border: 1px lightgrey solid;
+  border-radius: 5px;
+}
+
+.categorie-tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.categorie-tags li {
+  background: white;
+  color: #36b37f;
+  font-size: 12px;
+  padding: 1em 0.5em;
+  margin: 1em 0.5em;
+  border-radius: 5px;
+}
+
+.categorie-title {
+  font-size: 24px;
+  color: #344563;
+}
+
+.categorie-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
