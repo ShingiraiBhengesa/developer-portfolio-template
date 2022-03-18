@@ -238,17 +238,19 @@ li {
   background: white;
   color: #36b37f;
   font-size: 12px;
+  font-weight: 600;
   padding: 1em 0.5em;
   margin: 1em 0.5em;
   border-radius: 5px;
 }
 
 .card-work > .card-tags > li {
-  background: lightgray;
+  background: #EBF0EE;
   font-size: 12px;
-  padding: 0.5em;
-  margin: 0 0.5em;
-  border-radius: 2px;
+  font-weight: 600;
+  padding: 1em 0.5em;
+  margin: 1em 0.5em;
+  border-radius: 5px;
 }
 
 .card-work-details-mobile {
