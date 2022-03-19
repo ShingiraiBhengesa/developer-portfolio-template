@@ -139,6 +139,16 @@ button:active {
   width: 2em;
 }
 
+.categorie-tags li {
+  background: white;
+  color: #36b37f;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 1em 0.5em;
+  margin: 1em 0.5em;
+  border-radius: 5px;
+}
+
 .header-nav-mobile > ul > li {
   margin-left: 28px;
   margin-top: 40px;
@@ -315,16 +325,6 @@ button:active {
   padding: 0;
   display: flex;
   justify-content: space-around;
-}
-
-.categorie-tags li {
-  background: white;
-  color: #36b37f;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 1em 0.5em;
-  margin: 1em 0.5em;
-  border-radius: 5px;
 }
 
 .card-work > .card-tags > li {
