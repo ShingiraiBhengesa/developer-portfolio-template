@@ -5,6 +5,10 @@ body {
   margin: 0;
   padding: 0;
   padding-bottom: 2em;
+
+  --shadow: 0 2px 10px -1px rgba(0, 0, 0, 0.8);
+  --shadow-accent: 0 2px 50px -1px rgba(0, 0, 0, 0.8);
+  --color-primary: #36b37f;
 }
 
 body {
@@ -37,12 +41,25 @@ h6 {
 }
 
 span {
-  color: #36b37f;
+  color: var(--color-primary);
 }
 
 img {
   max-width: 100%;
   display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 0 8px;
+}
+
+a {
+  text-decoration: none;
 }
 
 button {
@@ -51,7 +68,7 @@ button {
   border: none;
   width: fit-content;
   align-self: center;
-  background: #36b37f;
+  background: var(--color-primary);
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 2px;
@@ -93,6 +110,64 @@ button:active {
   align-items: center;
 }
 
+.header-nav-mobile {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  color: #3a4a42;
+  border: 1px lightgrey solid;
+  border-radius: 5px;
+}
+
+.menu-btn,
+.header-nav-mobile > button {
+  background-color: white;
+}
+
+.header-nav-mobile > button {
+  margin: 0.5em 0.5em;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.header-nav-mobile > img {
+  width: 2em;
+}
+
+.header-nav-mobile > ul > li {
+  margin-left: 28px;
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.header-nav-mobile > ul > li > a {
+  font-size: 24px;
+  font-weight: 600;
+  color: #3a4a42;
+  cursor: pointer;
+}
+
+.link-portfolio:hover,
+.link-about:hover,
+.link-contact:hover {
+  color: var(--color-primary);
+}
+
+.menu-btn.hidden {
+  display: none;
+}
+
+.header-nav-mobile.hidden {
+  display: none;
+}
+
 .header-logo {
   text-decoration: none;
   font-family: 'Inter', sans-serif;
@@ -106,6 +181,7 @@ button:active {
 .intro {
   background: #fff url(./assets/header-illsutration-mobile.svg) no-repeat;
   background-size: 100%;
+  overflow: hidden;
 }
 
 .intro h1:first-child {
@@ -132,10 +208,6 @@ button:active {
   display: flex;
   justify-content: center;
   width: 170px;
-}
-
-li {
-  margin: 0 8px;
 }
 
 @media (min-width: 992px) {
@@ -168,7 +240,7 @@ li {
   }
 
   .intro {
-    background: #fff url(./assets/Header-llustration-desktop.svg) no-repeat;
+    background: #fff url(./assest/Header-llustration-desktop.svg) no-repeat;
     background-size: 100%;
     padding-bottom: 8em;
   }
