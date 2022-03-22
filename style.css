@@ -526,6 +526,9 @@ button:active {
   font-size: 40px;
   line-height: 52px;
   height: auto;
+  flex: none;
+order: 0;
+flex-grow: 0;
 }
 
 .form-fields {
@@ -533,6 +536,38 @@ button:active {
 }
 
 .form-inputs {
-  width: 87.2%;
+  width: 100%;
   min-width: 327px;
+}
+
+.form-inputs input {
+  border: 1px solid #D0D9D4;
+box-sizing: border-box;
+border-radius: 4px;
+background: #FFFFFF;
+  min-width: 327px;
+}
+
+.input-name {
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 24px 0px;
+  padding: 15px;
+}
+
+.input-email {
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  margin: 24px 0px;
+  padding: 15px;
+}
+
+.input-message {
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+  margin: 24px 0px;
+  padding: 15px;
 }
