@@ -34,9 +34,7 @@ Open a terminal or a git bash in the desired directory and run  **git clone http
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
+- Daniel Malo Osorio: @Danie12345
 
 ## Show your support
 
