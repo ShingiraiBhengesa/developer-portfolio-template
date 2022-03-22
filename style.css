@@ -494,3 +494,45 @@ button:active {
   justify-content: center;
   align-items: center;
 }
+
+/* Daniel's Contribution */
+
+.footer-container {
+  margin: 0%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 1232px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.footer-form {
+  width: 100%;
+  height: 879px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('assets/form-background.png');
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+
+.footer-title {
+  width: 87.2%;
+  text-align: center;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 52px;
+  height: auto;
+}
+
+.form-fields {
+  margin: auto 0%;
+}
+
+.form-inputs {
+  width: 87.2%;
+  min-width: 327px;
+}
