@@ -536,13 +536,9 @@ footer > a {
 /* About Section */
 .about-myself {
   margin-top: 2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
   /* prettier-ignore */
-  background: url(./assets/illustration_1-about_me-mobile.svg) no-repeat 100% 0%, url(./assets/illustration_2-about_me_mobile.svg) no-repeat 0 300px;
+  background: url(./assest/illustration_1-about_me-mobile.svg) no-repeat 100% 0%, url(./assest/illustration_2-about_me_mobile.svg) no-repeat 0 300px;
   text-align: center;
   padding: 2em;
 }
@@ -580,6 +576,15 @@ footer > a {
   flex-wrap: wrap;
 }
 
+.categorie-tags li {
+  background: white;
+  color: #36b37f;
+  font-size: 12px;
+  padding: 1em 0.5em;
+  margin: 1em 0.5em;
+  border-radius: 5px;
+}
+
 .categorie-title {
   font-size: 24px;
   color: #344563;
@@ -589,6 +594,22 @@ footer > a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (min-width: 1024px) {
+  /* prettier-ignore */
+  .about-myself {
+    background: url(./assets/about_me_desktop_left.svg) no-repeat 0% 20%, url(./assets/about_me_desktop_rigth.svg) no-repeat 100% 0%;
+  }
+}
+
+@media (min-width: 768px) {
+  .categorie-about-myself {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 90%;
+  }
 }
 
 /* Footer section */
@@ -681,7 +702,7 @@ footer::after {
     padding-bottom: 0;
 
     /* prettier-ignore */
-    background: url(./assets/illustration-1-contact-form-desktop.svg) no-repeat 0% 90%, url(./assets/illustration-2-contact-form-desktop.svg) no-repeat 30% 90%, url(./assest/illustratoin-3-contact-form-desktop.svg) no-repeat 100% 90%;
+    background: url(./assets/illustration-1-contact-form-desktop.svg) no-repeat 0% 90%, url(./assets/illustration-2-contact-form-desktop.svg) no-repeat 30% 90%, url(./assets/illustratoin-3-contact-form-desktop.svg) no-repeat 100% 90%;
   }
 
   .footer-form {
