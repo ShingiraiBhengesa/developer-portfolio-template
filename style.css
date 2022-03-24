@@ -576,15 +576,6 @@ footer > a {
   flex-wrap: wrap;
 }
 
-.categorie-tags li {
-  background: white;
-  color: #36b37f;
-  font-size: 12px;
-  padding: 1em 0.5em;
-  margin: 1em 0.5em;
-  border-radius: 5px;
-}
-
 .categorie-title {
   font-size: 24px;
   color: #344563;
