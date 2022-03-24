@@ -538,7 +538,7 @@ footer > a {
   margin-top: 2em;
 
   /* prettier-ignore */
-  background: url(./assest/illustration_1-about_me-mobile.svg) no-repeat 100% 0%, url(./assest/illustration_2-about_me_mobile.svg) no-repeat 0 300px;
+  background: url(./assets/illustration_1-about_me-mobile.svg) no-repeat 100% 0%, url(./assets/illustration_2-about_me_mobile.svg) no-repeat 0 300px;
   text-align: center;
   padding: 2em;
 }
@@ -591,6 +591,7 @@ footer > a {
   /* prettier-ignore */
   .about-myself {
     background: url(./assets/about_me_desktop_left.svg) no-repeat 0% 20%, url(./assets/about_me_desktop_rigth.svg) no-repeat 100% 0%;
+    background-size: 13vw;
   }
 }
 
