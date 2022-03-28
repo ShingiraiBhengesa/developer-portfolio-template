@@ -4,9 +4,10 @@
 
 > Professional Portfolio created using HTML, CSS
 
-## Link to the project 
+## View The Project here
 
  https://shingiraibhengesa.github.io/My-Portfolio/
+
 
 ## Built With
 
