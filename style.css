@@ -29,7 +29,7 @@ h1 {
   margin-bottom: 0;
 }
 
-h6 {
+h2 {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -282,11 +282,11 @@ footer > a {
   margin: 0 auto;
 }
 
-.works h6:first-child {
+.works h2:first-child {
   padding: 1em;
 }
 
-.works h6:first-child::after {
+.works h2:first-child::after {
   content: '';
   height: 4px;
   width: 48px;
@@ -453,14 +453,14 @@ footer > a {
     grid-template-rows: 200px repeat(3, 1fr);
   }
 
-  .works h6:first-child {
+  .works h2:first-child {
     align-self: flex-end;
     padding: 1em;
     grid-column: 1 / -1;
     grid-row: 1 / 2;
   }
 
-  .works h6:first-child::after {
+  .works h2:first-child::after {
     content: none;
   }
 }
@@ -526,7 +526,7 @@ footer > a {
     grid-template-rows: 200px repeat(2, 1fr);
   }
 
-  .works h6:first-child {
+  .works h2:first-child {
     padding: 1em;
     grid-column: 1 / 4;
     grid-row: 1 / 2;
