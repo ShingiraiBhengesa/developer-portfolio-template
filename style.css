@@ -337,7 +337,8 @@ font-weight: 600;
 line-height: 32px;
 letter-spacing: 0em;
 text-align: center;
-
+margin-top: 20px;
+margin-bottom: 0;
 }
 
 .card-tags,
