@@ -329,6 +329,17 @@ footer > a {
   object-fit: cover;
 }
 
+.card-title {
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 32px;
+letter-spacing: 0em;
+text-align: center;
+
+}
+
 .card-tags,
 .categorie-tags {
   list-style: none;
@@ -564,7 +575,7 @@ footer > a {
   justify-content: center;
   padding: 0;
   margin-bottom: 2em;
-  height: 352px;
+  height: 400px;
   width: 327px;
   background: #ebf0ee;
   border: 1px lightgrey solid;
