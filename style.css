@@ -8,7 +8,7 @@ body {
 
   --shadow: 0 2px 10px -1px rgba(0, 0, 0, 0.8);
   --shadow-accent: 0 2px 50px -1px rgba(0, 0, 0, 0.8);
-  --color-primary: #1D5D43;
+  --color-primary: #1d5d43;
 }
 
 body {
@@ -330,15 +330,15 @@ footer > a {
 }
 
 .card-title {
-font-family: Inter;
-font-size: 24px;
-font-style: normal;
-font-weight: 600;
-line-height: 32px;
-letter-spacing: 0em;
-text-align: center;
-margin-top: 20px;
-margin-bottom: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 0;
 }
 
 .card-tags,
