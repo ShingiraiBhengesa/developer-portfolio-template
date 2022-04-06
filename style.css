@@ -533,7 +533,6 @@ footer > a {
   }
 }
 
-
 @media (min-width: 1150px) {
   .works {
     grid-template-columns: 1fr 1fr 1fr;
