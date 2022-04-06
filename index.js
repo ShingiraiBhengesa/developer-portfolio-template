@@ -6,7 +6,6 @@ const linkAbout = document.querySelector('.link-about');
 const linkContact = document.querySelector('.link-contact');
 const arrayBtnPopup = document.querySelectorAll('.btn-popup');
 
-
 menuBtn.addEventListener('click', () => {
   menuBtn.classList.add('hidden');
   headerNavMobile.classList.remove('hidden');
@@ -178,5 +177,4 @@ for (let i = 0; i < arrayBtnPopup.length; i++) {
       window.location.reload();
     });
   });
-}
-
+  }
