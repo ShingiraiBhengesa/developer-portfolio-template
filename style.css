@@ -371,8 +371,8 @@ footer > a {
   left: 50%;
   transition: 2000ms ease-in-out;
   transform: translate(-50%, -50%) scale(1);
-  height: 100%;
-  width: 100%;
+  height: 95%;
+  width: 80%;
   z-index: 2;
 }
 
@@ -432,6 +432,7 @@ footer > a {
   font-weight: normal;
   font-size: 1em;
   line-height: 1.5em;
+  margin-top: -5px;
 }
 
 .card-button-mobile {
@@ -531,6 +532,7 @@ footer > a {
     grid-row: 5 / 6;
   }
 }
+
 
 @media (min-width: 1150px) {
   .works {
