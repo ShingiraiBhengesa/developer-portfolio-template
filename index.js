@@ -37,7 +37,6 @@ contactForm.addEventListener('submit', (event) => {
     contactForm.submit();
   }
 }); 
-
 menuBtn.addEventListener('click', () => {
   menuBtn.classList.add('hidden');
   headerNavMobile.classList.remove('hidden');
