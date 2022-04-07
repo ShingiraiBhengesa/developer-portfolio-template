@@ -145,13 +145,23 @@ button:active {
   margin: 0 8px;
 }
 
-.social-media li{
+.social-media li {
   margin: 0 8px;
 }
 
 .categorie-tags li {
   background: white;
   color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 1em 0.5em;
+  margin: 1em 0.5em;
+  border-radius: 5px;
+}
+
+.card-categories li {
+  background:#ebf0ee ;
+  color: #4a3a3f;
   font-size: 12px;
   font-weight: 600;
   padding: 1em 0.5em;
@@ -340,16 +350,6 @@ footer > a {
   flex-wrap: wrap;
 }
 
-.card-categories li {
-  background:#ebf0ee ;
-  color: #4a3a3f;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 1em 0.5em;
-  margin: 1em 0.5em;
-  border-radius: 5px;
-}
-
 .card-categories li:hover {
   box-shadow: 0 10px 20px 0 #ebf0ee;
 }
@@ -403,6 +403,11 @@ footer > a {
   flex-direction: column;
   border-radius: 16px;
   padding: 16px;
+}
+
+.about-myself p {
+  font-size: 20px;
+  color: #42526e;
 }
 
 #popup p {
@@ -556,11 +561,6 @@ footer > a {
   background: url(./assets/illustration_1-about_me-mobile.svg) no-repeat 100% 0%, url(./assets/illustration_2-about_me_mobile.svg) no-repeat 0 300px;
   text-align: center;
   padding: 2em;
-}
-
-.about-myself p {
-  font-size: 20px;
-  color: #42526e;
 }
 
 .categorie-about-myself {
