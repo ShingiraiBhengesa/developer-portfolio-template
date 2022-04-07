@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
     <title>Shingirai Portfolio</title>
   </head>
@@ -35,12 +35,12 @@
         </nav>
       </div>
     </header>
-    <section class="intro">
+    <div class="intro">
       <nav>
         <ul class="header-nav-desktop">
-          <li>Portfolio</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li><a href="#recent-work">Portfolio</a></li>
+          <li><a href="#about-me">About</a></li>
+          <li><a href="#contact-me">Contact</a></li>
         </ul>
       </nav>
       <div class="container container-flex">
@@ -92,89 +92,20 @@
           <img src="./assets/Disabled.svg" alt="disabled button" />
         </button>
       </div>
-    </section>
-    <section>
-      <div id="recent-work" class="works">
-        <h2>My Recent Works</h2>
-        <div class="card-work">
-          <div class="card-image">
-            <img src="./assets/placeholder.png" alt="image work" />
+    </div>
+    <section class="works" id="recent-works">
+      <h2 class="title inter naval">My Recent Works</h2>
+      <ul class="cards-container">
+        <li class="card">
+          <div class="card-caption">
+            <h3 class="inter card-title">Multi-Post Stories Gain+Glory</h3>
+            <ul class="card-categories inter">
+  
+            </ul>
+            <button type="button" class="primary-btn inter">See Project</button>
           </div>
-          <h6 class="card-title">Multi-Post Stories Gain+Glory</h6>
-          <ul class="card-tags">
-            <li>Ruby on rails</li>
-            <li>css</li>
-            <li>JavaScript</li>
-            <li>html</li>
-          </ul>
-          <button type="button">See Project</button>
-        </div>
-        <div class="card-work">
-          <div class="card-image">
-            <img src="./assets/placeholder.png" alt="image work" />
-          </div>
-          <h6 class="card-title">Multi-Post Stories Gain+Glory</h6>
-          <ul class="card-tags">
-            <li>Ruby on rails</li>
-            <li>css</li>
-            <li>JavaScript</li>
-            <li>html</li>
-          </ul>
-          <button type="button">See Project</button>
-        </div>
-        <div class="card-work">
-          <div class="card-image">
-            <img src="./assets/placeholder.png" alt="image work" />
-          </div>
-          <h6 class="card-title">Multi-Post Stories Gain+Glory</h6>
-          <ul class="card-tags">
-            <li>Ruby on rails</li>
-            <li>css</li>
-            <li>JavaScript</li>
-            <li>html</li>
-          </ul>
-          <button type="button">See Project</button>
-        </div>
-        <div class="card-work">
-          <div class="card-image">
-            <img src="./assets/placeholder.png" alt="image work" />
-          </div>
-          <h6 class="card-title">Multi-Post Stories Gain+Glory</h6>
-          <ul class="card-tags">
-            <li>Ruby on rails</li>
-            <li>css</li>
-            <li>JavaScript</li>
-            <li>html</li>
-          </ul>
-          <button type="button">See Project</button>
-        </div>
-        <div class="card-work">
-          <div class="card-image">
-            <img src="./assets/placeholder.png" alt="image work" />
-          </div>
-          <h6 class="card-title">Multi-Post Stories Gain+Glory</h6>
-          <ul class="card-tags">
-            <li>Ruby on rails</li>
-            <li>css</li>
-            <li>JavaScript</li>
-            <li>html</li>
-          </ul>
-          <button type="button">See Project</button>
-        </div>
-        <div class="card-work">
-          <div class="card-image">
-            <img src="./assets/placeholder.png" alt="image work" />
-          </div>
-          <h6 class="card-title">Multi-Post Stories Gain+Glory</h6>
-          <ul class="card-tags">
-            <li>Ruby on rails</li>
-            <li>css</li>
-            <li>JavaScript</li>
-            <li>html</li>
-          </ul>
-          <button type="button">See Project</button>
-        </div>
-      </div>
+        </li>
+      </ul>
     </section>
     <section class="container-flex about-myself" id="about-me">
       <div class="container">
@@ -188,7 +119,7 @@
       </div>
       <ul class="categorie-about-myself">
         <li>
-          <div class="card-categories">
+          <div class="card-categorie">
             <div class="categorie-image">
               <img src="./assets/icon-languages.svg" alt="icon languages" />
             </div>
@@ -203,7 +134,7 @@
           </div>
         </li>
         <li>
-          <div class="card-categories">
+          <div class="card-categorie">
             <div class="categorie-image">
               <img src="./assets/icon-frameworks.svg" alt="icon frameworks" />
             </div>
@@ -218,7 +149,7 @@
           </div>
         </li>
         <li>
-          <div class="card-categories">
+          <div class="card-categorie">
             <div class="categorie-image">
               <img src="./assets/icon-skills.svg" alt="icon skills" />
             </div>
@@ -329,6 +260,26 @@
       </ul>
       <a href="wwww.gmail.com">shingiebhengesa@gmail.com</a>
     </footer>
+    <div id="popup" class="popup-hidden">
+      <div class="inner-popup">
+        <img src="./assets/Icon-Cancel.svg" alt="Close popup" class="close-popup-desktop">
+        <picture>
+          <source media="(min-width:768px)" srcset="./assets/project2.svg">
+          <img src="./assets/project2.svg" alt="Popup Image" id="featured_img">
+        </picture>
+        <img src="./assets/close-popup.svg" alt="Close popup" class="close-popup">
+        <h2 class="inter popup-title naval">TITLE</h2>
+        <ul class="popup-technologies card-categories inter">
+          <!-- li items -->
+        </ul>
+        <p class="inter naval">DESCRIPTION</p>
+        <div class="popup-buttons">
+          <a class="primary-btn inter">See Live <img src="./assets/see_live_icon.svg" alt="See live project icon"></a>
+          <a class="primary-btn inter">See Source <img src="./assets/github_white.svg" alt="See project's source code icon"></a>
+        </div>
+      </div>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
+
