@@ -4,7 +4,10 @@ const btnCloseNav = document.querySelector('.btn-close-nav');
 const linkPortfolio = document.querySelector('.link-portfolio');
 const linkAbout = document.querySelector('.link-about');
 const linkContact = document.querySelector('.link-contact');
-const arrayBtnPopup = document.querySelectorAll('.btn-popup');
+const recentWorksListItem = document.querySelector('#recent-works li');
+const recentWorksContainer = document.querySelector('#recent-works');
+const popup = document.querySelector('#popup');
+const closePopupBtns = popup.querySelectorAll('#popup .close-popup, #popup .close-popup-desktop');
 
 menuBtn.addEventListener('click', () => {
   menuBtn.classList.add('hidden');
@@ -30,151 +33,145 @@ linkContact.addEventListener('click', () => {
   headerNavMobile.classList.add('hidden');
   menuBtn.classList.remove('hidden');
 });
-const dataCards = [
+
+const RECENT_WORKS = [
   {
-    id: 0,
-    url: './assets/project.svg',
-    title: 'Keeping track of hundreds of components',
-    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-  and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and
-  typesetting industry.`,
-    tecnologies: {
-      tech1: 'Ruby on rails',
-      tech2: 'css',
-      tech3: 'JavaScript',
-      tech4: 'html',
-    },
-    linkVersion: 'https://www.google.com',
-    linkSource: 'https://github.com/ShingiraiBhengesa',
+    title: 'Multi-Post Stories Gain+Glory',
+    name: 'Keeping track of hundreds of components',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    featured_img: './assets/project2.svg',
+    desktop_featured_img: './assets/project.svg',
+    technologies: [
+      'Ruby',
+      'CSS',
+      'JavaScript',
+      'HTML',
+    ],
+    live: '#',
+    source: '#',
   },
   {
-    id: 1,
-    url: './assets/project.svg',
-    title: 'Keeping track of hundreds of components 1',
-    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-  and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and
-  typesetting industry.`,
-    tecnologies: {
-      tech1: 'Ruby on rails',
-      tech2: 'css',
-      tech3: 'JavaScript',
-      tech4: 'html',
-    },
-    linkVersion: 'https://www.google.com',
-    linkSource: 'https://github.com/ShingiraiBhengesa',
+    title: 'Multi-Post Stories Gain+Glory',
+    name: 'Keeping track of hundreds of components',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    featured_img: './assets/project2.svg',
+    desktop_featured_img: './assets/project.svg',
+    technologies: [
+      'Ruby',
+      'CSS',
+      'JavaScript',
+      'HTML',
+    ],
+    live: '#',
+    source: '#',
   },
   {
-    id: 2,
-    url: './assets/project.svg',
-    title: 'Keeping track of hundreds of components 2',
-    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-  and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and
-  typesetting industry.`,
-    tecnologies: {
-      tech1: 'Ruby on rails',
-      tech2: 'css',
-      tech3: 'JavaScript',
-      tech4: 'html',
-    },
-    linkVersion: 'https://www.google.com',
-    linkSource: 'https://github.com/ShingiraiBhengesa',
+    title: 'Multi-Post Stories Gain+Glory',
+    name: 'Keeping track of hundreds of components',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    featured_img: './assets/project2.svg',
+    desktop_featured_img: './assets/project.svg',
+    technologies: [
+      'Ruby',
+      'CSS',
+      'JavaScript',
+      'HTML',
+    ],
+    live: '#',
+    source: '#',
   },
   {
-    id: 3,
-    url: './assets/project.svg',
-    title: 'Keeping track of hundreds of components 3',
-    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-  and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and
-  typesetting industry.`,
-    tecnologies: {
-      tech1: 'Ruby on rails',
-      tech2: 'css',
-      tech3: 'JavaScript',
-      tech4: 'html',
-    },
-    linkVersion: 'https://www.google.com',
-    linkSource: 'https://github.com/ShingiraiBhengesa',
+    title: 'Multi-Post Stories Gain+Glory',
+    name: 'Keeping track of hundreds of components',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    featured_img: './assets/project2.svg',
+    desktop_featured_img: './assets/project.svg',
+    technologies: [
+      'Ruby',
+      'CSS',
+      'JavaScript',
+      'HTML',
+    ],
+    live: '#',
+    source: '#',
   },
   {
-    id: 4,
-    url: './assets/project.svg',
-    title: 'Keeping track of hundreds of components 4',
-    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-  and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and`,
-    tecnologies: {
-      tech1: 'Ruby on rails',
-      tech2: 'css',
-      tech3: 'JavaScript',
-      tech4: 'html',
-    },
-    linkVersion: 'https://www.google.com',
-    linkSource: 'https://github.com/ShingiraiBhengesa',
+    title: 'Multi-Post Stories Gain+Glory',
+    name: 'Keeping track of hundreds of components',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    featured_img: './assets/project2.svg',
+    desktop_featured_img: './assets/project.svg',
+    technologies: [
+      'Ruby',
+      'CSS',
+      'JavaScript',
+      'HTML',
+    ],
+    live: '#',
+    source: '#',
   },
   {
-    id: 5,
-    url: './assets/project.svg',
-    title: 'Keeping track of hundreds of components 5',
-    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-  and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and
-  typesetting industry.`,
-    tecnologies: {
-      tech1: 'Ruby on rails',
-      tech2: 'css',
-      tech3: 'JavaScript',
-      tech4: 'html',
-    },
-    linkVersion: 'https://www.google.com/',
-    linkSource: 'https://github.com/ShingiraiBhengesa',
+    title: 'Multi-Post Stories Gain+Glory',
+    name: 'Keeping track of hundreds of components',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    featured_img: './assets/project2.svg',
+    desktop_featured_img: './assets/project.svg',
+    technologies: [
+      'Ruby',
+      'CSS',
+      'JavaScript',
+      'HTML',
+    ],
+    live: '#',
+    source: '#',
   },
 ];
 
-const cardWorkDetailsMobile = (index) => `
-  <div class="card-work-details-mobile">
-          <button type="button" class="btn-close-details">
-              <img src="./assets/Icon-Cancel.svg" alt="cancel icon">
-          </button>
-          <div class="card-image-details-mobile">
-              <img src=${dataCards[index].url} alt="project snapshot">
-          </div>
-          <h2 class="card-title-mobile">
-              ${dataCards[index].title}
-          </h2>
-          <ul class="card-tags-mobile">
-              <li class="tag-mobile">${dataCards[index].tecnologies.tech1}</li>
-              <li class="tag-mobile">${dataCards[index].tecnologies.tech2}</li>
-              <li class="tag-mobile">${dataCards[index].tecnologies.tech3}</li>
-              <li class="tag-mobile">${dataCards[index].tecnologies.tech4}</li>
-          </ul>
-          <p class="card-paragraph-mobile">
-            ${dataCards[index].description}
-          </p>
-          <div class="card-button-mobile">
-                  <a href=${dataCards[index].linkVersion} class="btn-card-details-mobile">
-                  See Live
-                  <img src="./assets/see_live_icon.svg" alt="see live icon">
-                  </a>
-                  <a href=${dataCards[index].linkSource} class="btn-card-details-mobile">
-                  See Sources
-                  <img src="./assets/github_white.svg" alt="see github icon">
-                  </a>
-          </div>
-          <script src="index.js"></script>
-  </div>
-  `;
+for (let i = 0; i < RECENT_WORKS.length; i += 1) {
+  const card = recentWorksListItem.cloneNode(true);
+  const title = card.querySelector('h3.card-title');
+  const button = card.querySelector('button');
+  const categories = card.querySelector('ul.card-categories');
 
-// eslint-disable-next-line no-plusplus
-for (let i = 0; i < arrayBtnPopup.length; i++) {
-  arrayBtnPopup[i].addEventListener('click', () => {
-    document.body.innerHTML = cardWorkDetailsMobile(i);
-    const btnCloseDetailsMobile = document.querySelector('.btn-close-details');
-    btnCloseDetailsMobile.addEventListener('click', async () => {
-      window.location.reload();
-    });
-  });
+  title.innerHTML = RECENT_WORKS[i].title;
+  button.setAttribute('id', `seeProjectButton-${i}`);
+  for (let j = 0; j < RECENT_WORKS[i].technologies.length; j += 1) {
+    const item = document.createElement('li');
+    item.innerHTML = RECENT_WORKS[i].technologies[j];
+    categories.append(item);
+  }
+
+  recentWorksListItem.after(card);
 }
+
+recentWorksListItem.remove();
+
+recentWorksContainer.addEventListener('click', (event) => {
+  if (event.target.classList.contains('primary-btn')) {
+    const project = event.target.id.split('-');
+    const popupTitle = popup.querySelector('.popup-title');
+    const popupDescription = popup.querySelector('#popup p');
+    const popupImg = popup.querySelector('#featured_img');
+    const popupImgDesktop = popup.querySelector('#popup picture > source');
+    const popupTechnologies = popup.querySelector('#popup ul');
+    popupTechnologies.innerHTML = '';
+    RECENT_WORKS[project[1]].technologies.forEach((technology) => {
+      const techItem = document.createElement('li');
+      techItem.innerHTML = technology;
+      popupTechnologies.prepend(techItem);
+    });
+
+    popupImgDesktop.setAttribute('srcset', RECENT_WORKS[project[1]].desktop_featured_img);
+    popupImg.setAttribute('src', RECENT_WORKS[project[1]].featured_img);
+    popupImg.setAttribute('alt', RECENT_WORKS[project[1]].title);
+    popupDescription.innerHTML = RECENT_WORKS[project[1]].description;
+    popupTitle.innerHTML = RECENT_WORKS[project[1]].title;
+    popup.classList.toggle('popup-hidden');
+  }
+});
+
+closePopupBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    popup.classList.toggle('popup-hidden');
+  });
+});
