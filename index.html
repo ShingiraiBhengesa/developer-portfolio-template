@@ -171,7 +171,7 @@
           I'm always interested in hearing about new projects, so if you'd like
           to chat please get in touch.
         </h2>
-        <form action="https://formspree.io/f/mgedzjkr" method="POST">
+        <form action="https://formspree.io/f/mgedzjkr" method="POST" name="contact-form" novalidate>
           <ul class="form-fields">
             <li class="input-name">
               <input
@@ -180,7 +180,6 @@
                 id="name"
                 maxlength="30"
                 placeholder="Full name"
-                required
               />
             </li>
             <li class="input-full-name">
@@ -209,6 +208,7 @@
                 id="email"
                 placeholder="Email address"
                 required
+                pattern="[^A-Z]+"
               />
             </li>
             <li>
@@ -222,6 +222,7 @@
                 required
               ></textarea>
             </li>
+            <li class="form-error hidden inter" id="form-error"></li>
             <li class="submit-button">
               <button type="submit">Get in touch</button>
             </li>

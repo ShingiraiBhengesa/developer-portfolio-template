@@ -756,3 +756,21 @@ footer::after {
     align-self: flex-start;
   }
 }
+
+.form-error {
+  background: #ffe7e8;
+  border: 1px solid #ff6163;
+  border-radius: 4px;
+  padding: 16px;
+  align-self: stretch;
+  color: #ff6163;
+}
+
+input.invalid,
+.form-container textarea.invalid {
+  border: solid 1px #ff6163;
+}
+
+.hidden {
+  display: none;
+}
