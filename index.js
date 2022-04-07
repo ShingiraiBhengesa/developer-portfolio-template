@@ -8,6 +8,35 @@ const recentWorksListItem = document.querySelector('#recent-works li');
 const recentWorksContainer = document.querySelector('#recent-works');
 const popup = document.querySelector('#popup');
 const closePopupBtns = popup.querySelectorAll('#popup .close-popup, #popup .close-popup-desktop');
+const contactForm = document.forms['contact-form'];
+const errorContainer = document.getElementById('form-error');
+
+contactForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  errorContainer.classList.add('hidden');
+  errorContainer.textContent = '';
+
+  Array.from(contactForm.elements).forEach((element) => {
+    element.classList.remove('invalid');
+    if (!element.validity.valid) {
+      if (element.validity.valueMissing) {
+        errorContainer.textContent = `The field ${element.name} is required.`;
+      } else if (element.validity.typeMismatch) {
+        errorContainer.textContent = 'Please provide a valid e-mail address.';
+      } else if (element.validity.patternMismatch) {
+        errorContainer.textContent = 'Please provide email only in lowercase.';
+      } else if (element.validity.tooLong) {
+        errorContainer.textContent = `The field ${element.name} exceeded the max character count (${element.getAttribute('maxlength')}).`;
+      }
+      errorContainer.classList.remove('hidden');
+      element.classList.add('invalid');
+    }
+  });
+
+  if (contactForm.reportValidity()) {
+    contactForm.submit();
+  }
+}); 
 
 menuBtn.addEventListener('click', () => {
   menuBtn.classList.add('hidden');
